@@ -1,3 +1,9 @@
+/*
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
 (function($) {
 
 	skel.breakpoints({
@@ -43,14 +49,17 @@
 
 				$bg
 					.removeClass('fixed')
-					.css('transform', 'none');
+					.css('transform', 'matrix(1,0,0,1,0,0)');
 
 				$window
 					.on('scroll._parallax', function() {
 
-						$bg.css('transform', 'none');
+						var pos = parseInt($window.scrollTop()) - parseInt($t.position().top);
+
+						$bg.css('transform', 'matrix(1,0,0,1,0,' + (pos * intensity) + ')');
 
 					});
+
 			};
 
 			off = function() {
