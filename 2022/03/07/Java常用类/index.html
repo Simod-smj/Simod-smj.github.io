@@ -156,7 +156,11 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1 id="Java常用类"><a href="#Java常用类" class="headerlink" title="Java常用类"></a>Java常用类</h1><h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><ol>
+                <hr>
+<p>title:Java常用类<br>img:<a target="_blank" rel="noopener" href="https://gitee.com/simod-smj/images/raw/master/img/202203101943394.jpg">https://gitee.com/simod-smj/images/raw/master/img/202203101943394.jpg</a></p>
+<hr>
+<p><img src="https://gitee.com/simod-smj/images/raw/master/img/202203101943394.jpg" alt="IMG_1837"></p>
+<h1 id="Java常用类"><a href="#Java常用类" class="headerlink" title="Java常用类"></a>Java常用类</h1><h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><ol>
 <li>成员内部类</li>
 <li>静态内部类</li>
 <li>局部内部类</li>
@@ -203,7 +207,7 @@
 <p>一般为只使用一次 </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匿名内部类</span></span><br><span class="line"><span class="comment">//只使用一次</span></span><br><span class="line"><span class="type">USB</span> <span class="variable">usb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">USB</span>()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">service</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;匿名内部类&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">usb.service();</span><br></pre></td></tr></table></figure>
 
-<p>![image-20220308123148118](&#x2F;Users&#x2F;smj&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220308123148118.png)</p>
+<p><img src="https://gitee.com/simod-smj/images/raw/master/img/%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6.png" alt="image-20220308123148118"></p>
 <p>字节码文件 默认 数字1234排序</p>
 <h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><blockquote>
 <p>超类、基类，所有类的直接或间接父类 老祖宗</p>
@@ -306,7 +310,7 @@
 
 
 
-<img src="/Users/smj/Library/Application Support/typora-user-images/image-20220308171308741.png" alt="image-20220308171308741" style="zoom: 50%;" />
+<img src="https://gitee.com/simod-smj/images/raw/master/img/%E5%86%85%E5%AD%98%E5%9B%BE%E7%A4%BA.png" alt="image-20220308171308741" style="zoom: 50%;" />
 
 <p>同时地址发生变化</p>
 <p>当 String name2 &#x3D; “zhangsan”；时</p>
@@ -315,11 +319,11 @@
 <h4 id="字符串的另一种创建方式"><a href="#字符串的另一种创建方式" class="headerlink" title="字符串的另一种创建方式"></a>字符串的另一种创建方式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;java&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>创建了两个 对象。在堆 跟字符串池中分别创建了一个</p>
-<p>![image-20220308171959654](&#x2F;Users&#x2F;smj&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220308171959654.png)</p>
+<p><img src="https://gitee.com/simod-smj/images/raw/master/img/202203101814049.png" alt="image-20220308171959654"></p>
 <p>若此时再创建一个 “java”</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;java&quot;</span>);</span><br></pre></td></tr></table></figure>
 
-<p>![image-20220308173212952](&#x2F;Users&#x2F;smj&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220308173212952.png)</p>
+<p><img src="https://gitee.com/simod-smj/images/raw/master/img/202203101814999.png" alt="image-20220308173212952"></p>
 <p>明显 字符串池中只有一个java。但是在堆中创建了两个对象，所以栈中 str与str2的地址不同</p>
 <p>所以，比较字符串是否相等 不能用  str&#x3D;&#x3D;str2        结果为false        &#x3D;&#x3D;比较的是地址</p>
 <p>​                                                要用str.equals(str2)        结果为true        equals比较的是内容</p>
@@ -377,7 +381,7 @@
 <h2 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h2><p>提供了获取或设置各种日历字段的方法</p>
 <p>构造方法：</p>
 <p>​        protected Calendar() 由于修饰符为protected 所以无法直接创建对象</p>
-<p><img src="/Users/smj/Downloads/IMG_0420.JPG" alt="IMG_0420"></p>
+<p><img src="https://gitee.com/simod-smj/images/raw/master/img/202203101815946.JPG" alt="IMG_0420"></p>
 
             </div>
 
